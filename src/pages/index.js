@@ -19,6 +19,11 @@ function Home({ data }) {
       <Head>
         <title>Erica Candido</title>
         <link rel="icon" href="logo.png" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin
+        ></link>
       </Head>
       <HamburgerModal />
       <Layout>
