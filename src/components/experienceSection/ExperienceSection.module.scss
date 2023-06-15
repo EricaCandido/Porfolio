@@ -1,0 +1,59 @@
+.ExperienceSection {
+  margin-bottom: 70px;
+  .title {
+    font-family: $abril;
+    color: $dark-lilla;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    .wrapper {
+      display: flex;
+      position: relative;
+      gap: 10px;
+
+      .companyBubble,
+      .periodBubble,
+      .taskBubble {
+        height: 90px;
+        width: 90px;
+        border-radius: 100%;
+        background-color: $purple;
+        color: $pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+        text-align: center;
+        z-index: 1;
+      }
+
+      .periodBubble {
+        height: 70px;
+        width: 70px;
+        font-size: 0.7rem;
+        position: absolute;
+        bottom: -35px;
+        left: 40px;
+      }
+      .firstLink,
+      .secondLink {
+        border: 3px solid $purple;
+        transform: rotate(90deg);
+        height: 70px;
+      }
+      .companyLogo {
+        z-index: 1;
+        border-radius: $def-bord-rad;
+        box-shadow: $def-box-shadow;
+      }
+    }
+  }
+}

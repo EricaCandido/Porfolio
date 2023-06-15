@@ -1,0 +1,65 @@
+.Footer {
+  height: 220px;
+  background-color: $light-lilla;
+  border-top-left-radius: $def-bord-rad;
+  border-top-right-radius: $def-bord-rad;
+  box-shadow: 4px -4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  .title {
+    font-family: $abril;
+    color: $dark-lilla;
+  }
+
+  .mail {
+    display: flex;
+    gap: 10px;
+    font-family: $inter;
+    .gmailIcon {
+      fill: $purple;
+      font-size: 1.2rem;
+    }
+  }
+
+  .socialNetworks {
+    font-family: $inter;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    .LinkedIn,
+    .gH,
+    .iG {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .gHIcon,
+      .iGIcon {
+        fill: $purple;
+        font-size: 1.2rem;
+      }
+      .linIcon {
+        font-size: 1.4rem;
+        color: $purple;
+      }
+    }
+  }
+  .rights {
+    font-family: $abril;
+    background-color: $pink;
+    position: absolute;
+    bottom: 0;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    color: $light-lilla;
+    box-shadow: 4px -4px 6px rgba(246, 246, 246, 0.3);
+  }
+}

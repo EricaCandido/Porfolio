@@ -1,0 +1,21 @@
+.Header {
+  height: 80px;
+  background-color: $light-lilla;
+  border-bottom-left-radius: $def-bord-rad;
+  border-bottom-right-radius: $def-bord-rad;
+  box-shadow: $def-box-shadow;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    background-color: $purple;
+    padding: 8px;
+    border-radius: 100%;
+    margin-left: 20px;
+  }
+  .hamburger {
+    font-size: 2rem;
+    margin-right: 20px;
+  }
+}

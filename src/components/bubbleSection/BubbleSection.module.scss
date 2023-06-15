@@ -1,0 +1,37 @@
+.BubbleSection {
+  padding: 20px;
+
+  .title {
+    font-family: $abril;
+    color: $purple;
+    margin-bottom: 13px;
+  }
+
+  .myProjects,
+  .appFields,
+  .softSkills {
+    padding: 15px 0;
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .purple_bubble,
+      .pink_bubble {
+        height: 70px;
+        width: 70px;
+        border-radius: 100%;
+        background-color: $purple;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: $pink;
+        text-align: center;
+      }
+      .pink_bubble {
+        background-color: $dark-lilla;
+        color: $purple;
+      }
+    }
+  }
+}
