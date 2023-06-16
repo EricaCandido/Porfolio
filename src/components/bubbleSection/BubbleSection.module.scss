@@ -6,7 +6,15 @@
     color: $purple;
     margin-bottom: 13px;
   }
-
+  .myProjects {
+    overflow: auto;
+  }
+  .myProjects,
+  .appFields,
+  .softSkills {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
   .myProjects,
   .appFields,
   .softSkills {

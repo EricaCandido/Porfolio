@@ -1,4 +1,6 @@
 .Hero {
+  opacity: 0;
+  transform: translateY(-100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +16,10 @@
   .signature {
     font-family: $girl;
     color: $purple;
-    font-size: 2.2rem;
+    font-size: 3rem;
     position: absolute;
-    top: 35px;
-    right: calc(50% - 150px);
+    top: 40px;
+    right: calc(50% - 100px);
   }
   .title {
     font-family: $abril;

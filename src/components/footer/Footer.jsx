@@ -7,24 +7,26 @@ import { connect } from "react-redux";
 const Footer = ({ data }) => {
   return (
     <div className={styles.Footer}>
-      <h2 className={styles.title}>Contatti</h2>
+      <h2 id="contacts" className={styles.title}>
+        Contatti
+      </h2>
       <div className={styles.mail}>
         <SiGmail className={styles.gmailIcon} />
         <a href={`mailto:${data?.contacts?.email}`}>{data?.contacts?.email}</a>
       </div>
       <div className={styles.socialNetworks}>
-        <div className={styles.gH}>
+        <a href={data?.contacts?.github} className={styles.gH}>
           <FaGithub className={styles.gHIcon} />
           <p>EricaCandido</p>
-        </div>
-        <div className={styles.LinkedIn}>
+        </a>
+        <a href={data?.contacts?.linkedin} className={styles.LinkedIn}>
           <RxLinkedinLogo className={styles.linIcon} />
           <p>Erica Candido</p>
-        </div>
-        <div className={styles.iG}>
+        </a>
+        <a href={data?.contacts?.instagram} className={styles.iG}>
           <SiInstagram className={styles.iGIcon} />
           <p>@ericandido</p>
-        </div>
+        </a>
       </div>
       <p className={styles.rights}>Created by Erica Candido</p>
     </div>

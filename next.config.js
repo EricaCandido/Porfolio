@@ -18,6 +18,9 @@ const nextConfig = {
         @import "./src/styles/variables/variables.module.scss";
       `,
   },
+  build: {
+    transpile: ["gsap"],
+  },
 };
 
 module.exports = nextConfig;

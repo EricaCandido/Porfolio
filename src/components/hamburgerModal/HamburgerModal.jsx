@@ -12,12 +12,24 @@ const HamburgerModal = ({ globalState, updateState }) => {
       className={`${styles.HamburgerModal} ${globalState ? styles.show : ""}`}
     >
       <AiOutlineClose className={styles.close} onClick={onHandleClick} />
-      <li>I MIEI PROGETTI</li>
-      <li>CAMPI DI APPLICAZIONE</li>
-      <li>SOFT SKILLS</li>
-      <li>ESPERIENZE</li>
-      <li>FORMAZIONE</li>
-      <li>CONTATTI</li>
+      <a href="#myProjects" onClick={onHandleClick}>
+        I MIEI PROGETTI
+      </a>
+      <a href="#appFields" onClick={onHandleClick}>
+        CAMPI DI APPLICAZIONE
+      </a>
+      <a href="#softSkills" onClick={onHandleClick}>
+        SOFT SKILLS
+      </a>
+      <a href="#ExperienceSection" onClick={onHandleClick}>
+        ESPERIENZE
+      </a>
+      <a href="#EducationSection" onClick={onHandleClick}>
+        FORMAZIONE
+      </a>
+      <a href="#contacts" onClick={onHandleClick}>
+        CONTATTI
+      </a>
     </ul>
   );
 };

@@ -1,10 +1,30 @@
 import styles from "./BubbleSection.module.scss";
+
 import { connect } from "react-redux";
 
+import { useRef, useEffect } from "react";
+
+import { animation } from "@/utils/funcs";
+
 const BubbleSection = ({ data }) => {
+  const myProjectsRef = useRef(null);
+  const appFieldsRef = useRef(null);
+  const softSkillsRef = useRef(null);
+
+  useEffect(() => {
+    animation(myProjectsRef);
+    window.onscroll = function () {
+      if (window.scrollY > 100) {
+        animation(appFieldsRef);
+      }
+      if (window.scrollY > 400) {
+        animation(softSkillsRef);
+      }
+    };
+  }, []);
   return (
     <div className={styles.BubbleSection}>
-      <div className={styles.myProjects}>
+      <div id="myProjects" className={styles.myProjects} ref={myProjectsRef}>
         <h3 className={styles.title}>I MIEI PROGETTI</h3>
         <div className={styles.wrapper}>
           {data.projects.map((proj) => (
@@ -14,7 +34,7 @@ const BubbleSection = ({ data }) => {
           ))}
         </div>
       </div>
-      <div className={styles.appFields}>
+      <div id="appFields" className={styles.appFields} ref={appFieldsRef}>
         <h3 className={styles.title}>CAMPI DI APPLICAZIONE</h3>
         <div className={styles.wrapper}>
           {data.appFields.map((field, i) => (
@@ -24,7 +44,7 @@ const BubbleSection = ({ data }) => {
           ))}
         </div>
       </div>
-      <div className={styles.softSkills}>
+      <div id="softSkills" className={styles.softSkills} ref={softSkillsRef}>
         <h3 className={styles.title}>SOFT SKILLS</h3>
         <div className={styles.wrapper}>
           {data.softSkills.map((skill, i) => (

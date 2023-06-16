@@ -47,13 +47,15 @@ export const data = {
       task: "Stage Ricercatrice ambito IT",
       image: unict,
       period: "Maggio/ Giugno 2022",
+      url: "https://www.unict.it/",
     },
     {
       id: 2,
       company: "OVI-CNR",
       task: "Stage Ricercatrice ambito IT",
       image: ovi,
-      period: "Settembre /Ottobre 2022",
+      period: "Settembre/ Ottobre 2022",
+      url: "http://www.ovi.cnr.it/Attivit%C3%A0-2022.html",
     },
     {
       id: 3,
@@ -61,6 +63,7 @@ export const data = {
       task: "Front-end Dev",
       image: edgemony,
       period: "Aprile 2023",
+      url: "https://edgemony.com/coding-women-sicily/",
     },
     {
       id: 4,
@@ -68,6 +71,7 @@ export const data = {
       task: "Insegnante HTML,CSS, JS",
       image: opinno,
       period: "Maggio/ Giugno 2023",
+      url: "https://tree.it/corsi-gratuiti-online-2022/",
     },
   ],
   education: [
