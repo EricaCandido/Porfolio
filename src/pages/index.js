@@ -8,7 +8,6 @@ import ExperienceSection from "@/components/experienceSection";
 import EducationSection from "@/components/educationSection";
 
 import Head from "next/head";
-import Image from "next/image";
 
 import { connect } from "react-redux";
 
