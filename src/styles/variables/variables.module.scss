@@ -5,10 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inspiration&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 $abril: "DM Serif Display", serif;
 $inter: "Montserrat", sans-serif;
-$girl: "Yellowtail", cursive;
+$girl: "Sacramento", cursive;
+// $girl: "Yellowtail", cursive;
 // $abril: "Abril Fatface", cursive;
 // $inter: "Inter", sans-serif;
 // $girl: "Crafty Girls", cursive;
@@ -24,3 +26,26 @@ $pink: #fde2f3;
 $def-bord-rad: 18px;
 
 $def-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+
+// VARIABLES
+
+$tablet: 768px;
+$desktop: 1024px;
+
+//---------------------------------------------
+//MEDIA QUERY
+
+// Mobile
+//--------------------------------------------------------------------//
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}

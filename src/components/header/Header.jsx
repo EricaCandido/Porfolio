@@ -4,6 +4,7 @@ import { TfiMenu } from "react-icons/tfi";
 
 import { connect } from "react-redux";
 import { updateState } from "../../store/actions";
+import Link from "next/link";
 
 const Header = ({ globalState, updateState }) => {
   const onHandleClick = () => {
@@ -12,13 +13,16 @@ const Header = ({ globalState, updateState }) => {
 
   return (
     <div className={styles.Header}>
-      <Image
-        className={styles.logo}
-        src="/logo.png"
-        width={50}
-        height={50}
-        alt="logo"
-      />
+      <Link href="/">
+        {" "}
+        <Image
+          className={styles.logo}
+          src="/logo.png"
+          width={50}
+          height={50}
+          alt="logo"
+        />
+      </Link>
       <TfiMenu className={styles.hamburger} onClick={onHandleClick} />
     </div>
   );

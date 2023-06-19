@@ -8,6 +8,14 @@
   }
   .myProjects {
     overflow: auto;
+    .wrapper {
+      a {
+        transition: transform 0.35s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
   .myProjects,
   .appFields,
@@ -19,6 +27,10 @@
   .appFields,
   .softSkills {
     padding: 15px 0;
+
+    @include tablet {
+      width: 80%;
+    }
     .wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -35,6 +47,10 @@
         font-size: 0.8rem;
         color: $pink;
         text-align: center;
+        @include tablet {
+          height: 90px;
+          width: 90px;
+        }
       }
       .pink_bubble {
         background-color: $dark-lilla;

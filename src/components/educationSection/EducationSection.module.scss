@@ -1,5 +1,6 @@
 .EducationSection {
   margin-bottom: 70px;
+
   .title {
     font-family: $abril;
     color: $purple;
@@ -7,53 +8,106 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  .container {
-    opacity: 0;
-    transform: translateY(-1000%);
+  .generalWrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 70px;
     position: relative;
-
-    .firstLink,
-    .secondLink {
-      position: absolute;
-      border: 3px solid $dark-lilla;
-      height: 90px;
-      top: 200px;
-      left: 50%;
-    }
-    .secondLink {
-      top: 450px;
-    }
-    .wrapper {
-      display: flex;
+    .asideSection {
       position: relative;
-      gap: 10px;
 
-      .mainBubble,
-      .secondaryBubble {
-        height: 200px;
-        width: 200px;
-        border-radius: 100%;
-        background-color: $dark-lilla;
-        color: $pink;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        font-size: 1rem;
-        text-align: center;
+      display: none;
+      width: 100%;
+      @include tablet {
+        display: block;
       }
-      .secondaryBubble {
-        height: 100px;
-        width: 100px;
-        font-size: 1rem;
+
+      .sparkles1,
+      .sparkles4 {
+        font-size: 3rem;
+        color: $purple;
+        transform: rotate(45deg);
         position: absolute;
-        bottom: -50px;
-        left: 65%;
+        top: 20px;
+        left: 100px;
+      }
+      .sparkles4 {
+        right: 10%;
+        left: inherit;
+        top: 80%;
+      }
+      .sparkles2,
+      .sparkles3 {
+        font-size: 1.6rem;
+        color: $purple;
+        position: absolute;
+        top: 55%;
+        left: 20%;
+      }
+      .sparkles3 {
+        top: 30%;
+        left: inherit;
+        right: 20%;
+      }
+    }
+    .container {
+      opacity: 0;
+      transform: translateY(-1000%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 70px;
+      position: relative;
+
+      .firstLink,
+      .secondLink {
+        position: absolute;
+        border: 3px solid $dark-lilla;
+        height: 90px;
+        top: 200px;
+        left: 50%;
+        @include tablet {
+          height: 250px;
+        }
+      }
+      .secondLink {
+        top: 450px;
+      }
+      .wrapper {
+        display: flex;
+        position: relative;
+        gap: 10px;
+
+        .mainBubble,
+        .secondaryBubble {
+          height: 200px;
+          width: 200px;
+          border-radius: 100%;
+          background-color: $dark-lilla;
+          color: $pink;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          font-size: 1rem;
+          text-align: center;
+          @include tablet {
+            height: 250px;
+            width: 250px;
+          }
+        }
+        .secondaryBubble {
+          height: 100px;
+          width: 100px;
+          font-size: 1rem;
+          position: absolute;
+          bottom: -50px;
+          left: 65%;
+          @include tablet {
+            height: 150px;
+            width: 150px;
+          }
+        }
       }
     }
   }

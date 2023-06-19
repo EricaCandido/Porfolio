@@ -2,32 +2,152 @@
   opacity: 0;
   transform: translateY(-100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  position: relative;
-  padding: 10px;
-  .sigla {
-    font-family: $abril;
-    font-size: 4rem;
-    color: $light-lilla;
+
+  .leftSection,
+  .rightSection {
+    width: 33%;
+    height: 500px;
+    position: relative;
+    display: none;
+    @include desktop {
+      display: block;
+    }
+
+    .planet1,
+    .planet2,
+    .planet3 {
+      font-size: 4.3rem;
+      color: $purple;
+    }
+    .planet1 {
+      position: absolute;
+      bottom: 40%;
+      left: 2%;
+    }
+    .planet2 {
+      position: absolute;
+      bottom: 60%;
+      left: 43%;
+    }
+    .planet3 {
+      position: absolute;
+      bottom: 5%;
+      right: 2%;
+      font-size: 8rem;
+    }
+    .sparkles1,
+    .sparkles4 {
+      font-size: 2.5rem;
+      color: $purple;
+      position: absolute;
+      bottom: 75%;
+      left: 15%;
+      transform: rotate(45deg);
+    }
+    .sparkles4 {
+      bottom: 30%;
+      left: 50%;
+    }
+    .sparkles2,
+    .sparkles3 {
+      font-size: 2rem;
+      color: $purple;
+
+      position: absolute;
+      bottom: 60%;
+      right: 0;
+    }
+    .sparkles3 {
+      bottom: 5%;
+      left: 5%;
+    }
+
+    .lace1,
+    .lace2,
+    .lace3 {
+      position: absolute;
+      top: -10%;
+      bottom: 0;
+      right: 0;
+      border: 1px solid $purple;
+    }
+
+    .lace1 {
+      right: inherit;
+      left: 10%;
+      height: 300px;
+    }
+
+    .lace2 {
+      right: inherit;
+      left: 51%;
+      height: 190px;
+    }
+
+    .lace3 {
+      right: 15%;
+      height: 430px;
+    }
   }
-  .signature {
-    font-family: $girl;
-    color: $purple;
-    font-size: 3rem;
-    position: absolute;
-    top: 40px;
-    right: calc(50% - 120px);
-  }
-  .title {
-    font-family: $abril;
-    color: $dark-lilla;
-    font-size: 1.2rem;
-  }
-  .heroImg {
-    border-radius: $def-bord-rad;
-    box-shadow: $def-box-shadow;
+
+  .centerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    padding: 90px 10px 10px 10px;
+    @include desktop {
+      padding-top: 150px;
+    }
+
+    .sigla {
+      font-family: $abril;
+      font-size: 4rem;
+      color: $light-lilla;
+      @include tablet {
+        font-size: 5rem;
+      }
+    }
+    .signature {
+      font-family: $girl;
+      color: $purple;
+      font-size: 3rem;
+      position: absolute;
+      top: 120px;
+      right: calc(50% - 150px);
+      @include tablet {
+        font-size: 4rem;
+        right: calc(50% - 150px);
+      }
+      @include desktop {
+        top: 190px;
+      }
+    }
+    .title {
+      font-family: $abril;
+      color: $dark-lilla;
+      font-size: 1.2rem;
+      @include tablet {
+        font-size: 1.7rem;
+      }
+    }
+    .heroImg {
+      border-radius: $def-bord-rad;
+      box-shadow: $def-box-shadow;
+
+      @include tablet {
+        width: 50%;
+        height: auto;
+      }
+
+      @include desktop {
+        width: 60%;
+        height: auto;
+      }
+    }
   }
 }

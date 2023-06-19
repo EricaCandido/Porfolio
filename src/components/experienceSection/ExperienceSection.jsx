@@ -1,6 +1,8 @@
 import styles from "./ExperienceSection.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { SlArrowRight } from "react-icons/sl";
+
 import { animation, sortById } from "@/utils/funcs";
 import { connect } from "react-redux";
 import { useEffect, useRef } from "react";
@@ -30,8 +32,10 @@ const ExperienceSection = ({ data }) => {
             <p className={styles.companyBubble}>{exp.company}</p>
             <p className={styles.periodBubble}>{exp.period}</p>
             <hr className={styles.firstLink} />
+            <SlArrowRight className={styles.arrow} />
             <p className={styles.taskBubble}>{exp.task}</p>
             <hr className={styles.secondLink} />
+            <SlArrowRight className={styles.arrow} />
             <Link href={exp.url}>
               <Image
                 className={styles.companyLogo}

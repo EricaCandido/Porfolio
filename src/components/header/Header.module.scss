@@ -4,18 +4,27 @@
   border-bottom-left-radius: $def-bord-rad;
   border-bottom-right-radius: $def-bord-rad;
   box-shadow: $def-box-shadow;
+  position: fixed;
+  width: 100%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 9;
+
   .logo {
     background-color: $purple;
     padding: 8px;
     border-radius: 100%;
     margin-left: 20px;
+    margin-top: 10px;
   }
   .hamburger {
     font-size: 2rem;
     margin-right: 20px;
+
+    @include tablet {
+      display: none;
+    }
   }
 }

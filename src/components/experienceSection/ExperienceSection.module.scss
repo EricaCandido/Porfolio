@@ -1,6 +1,5 @@
 .ExperienceSection {
   margin-bottom: 70px;
-  // overflow: auto;
 
   .title {
     font-family: $abril;
@@ -21,6 +20,11 @@
       display: flex;
       position: relative;
       gap: 10px;
+      align-items: center;
+      @include tablet {
+        width: 80%;
+        justify-content: space-between;
+      }
 
       .companyBubble,
       .periodBubble,
@@ -37,6 +41,11 @@
         font-size: 0.85rem;
         text-align: center;
         z-index: 1;
+
+        @include tablet {
+          height: 150px;
+          width: 150px;
+        }
       }
 
       .periodBubble {
@@ -46,18 +55,45 @@
         position: absolute;
         bottom: -35px;
         left: 40px;
+        @include tablet {
+          height: 90px;
+          width: 90px;
+          bottom: -45px;
+          left: 60px;
+        }
+      }
+
+      .arrow {
+        display: none;
+
+        @include tablet {
+          display: block;
+          font-size: 2rem;
+          color: $purple;
+        }
       }
       .firstLink,
       .secondLink {
         border: 3px solid $purple;
         transform: rotate(90deg);
         height: 70px;
+        @include tablet {
+          display: none;
+        }
       }
       .companyLogo {
         position: relative;
         z-index: 4;
         border-radius: $def-bord-rad;
         box-shadow: $def-box-shadow;
+        transition: transform 0.35s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        @include tablet {
+          width: 150px;
+          height: auto;
+        }
       }
     }
   }
