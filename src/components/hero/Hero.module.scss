@@ -118,11 +118,13 @@
       font-size: 3rem;
       position: absolute;
       top: 120px;
-      right: calc(50% - 150px);
-      @include tablet {
-        font-size: 4rem;
-        right: calc(50% - 150px);
-      }
+      width: 250px;
+
+      right: calc(50% - 125px);
+      // @include tablet {
+      //   font-size: 4rem;
+      //   right: calc(50% - 150px);
+      // }
       @include desktop {
         top: 190px;
       }
