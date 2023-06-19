@@ -127,6 +127,7 @@
       // }
       @include desktop {
         top: 190px;
+        width: fit-content;
       }
     }
     .title {
