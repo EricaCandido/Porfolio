@@ -1,10 +1,13 @@
 .BubbleSection {
-  padding: 20px;
+  padding: 0 20px;
 
   .title {
     font-family: $abril;
     color: $purple;
     margin-bottom: 13px;
+  }
+  .anchorFix {
+    height: 80px;
   }
   .myProjects {
     overflow: auto;

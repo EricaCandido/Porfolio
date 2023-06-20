@@ -24,7 +24,8 @@ const BubbleSection = ({ data }) => {
   }, []);
   return (
     <div className={styles.BubbleSection}>
-      <div id="myProjects" className={styles.myProjects} ref={myProjectsRef}>
+      <div id="myProjects" className={styles.anchorFix}></div>
+      <div id="appFields" className={styles.myProjects} ref={myProjectsRef}>
         <h3 className={styles.title}>I MIEI PROGETTI</h3>
         <div className={styles.wrapper}>
           {data.projects.map((proj) => (
@@ -34,7 +35,7 @@ const BubbleSection = ({ data }) => {
           ))}
         </div>
       </div>
-      <div id="appFields" className={styles.appFields} ref={appFieldsRef}>
+      <div id="softSkills" className={styles.appFields} ref={appFieldsRef}>
         <h3 className={styles.title}>CAMPI DI APPLICAZIONE</h3>
         <div className={styles.wrapper}>
           {data.appFields.map((field, i) => (
@@ -44,7 +45,7 @@ const BubbleSection = ({ data }) => {
           ))}
         </div>
       </div>
-      <div id="softSkills" className={styles.softSkills} ref={softSkillsRef}>
+      <div className={styles.softSkills} ref={softSkillsRef}>
         <h3 className={styles.title}>SOFT SKILLS</h3>
         <div className={styles.wrapper}>
           {data.softSkills.map((skill, i) => (

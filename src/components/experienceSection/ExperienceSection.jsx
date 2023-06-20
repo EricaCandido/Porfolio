@@ -24,7 +24,8 @@ const ExperienceSection = ({ data }) => {
   });
 
   return (
-    <div id="ExperienceSection" className={styles.ExperienceSection}>
+    <div className={styles.ExperienceSection}>
+      <div id="ExperienceSection" className={styles.anchorFix}></div>
       <h2 className={styles.title}>ESPERIENZE</h2>
       <div className={styles.container} ref={containerRef}>
         {sortById(data.experiences).map((exp) => (

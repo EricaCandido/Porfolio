@@ -22,6 +22,7 @@ const EducationSection = ({ data }) => {
   });
   return (
     <div id="EducationSection" className={styles.EducationSection}>
+      <div className={styles.anchorFix}></div>
       <h2 className={styles.title}>FORMAZIONE</h2>
       <div className={styles.generalWrapper}>
         <div className={styles.asideSection}>

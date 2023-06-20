@@ -1,6 +1,8 @@
 .ExperienceSection {
   margin-bottom: 70px;
-
+  .anchorFix {
+    height: 80px;
+  }
   .title {
     font-family: $abril;
     color: $dark-lilla;
